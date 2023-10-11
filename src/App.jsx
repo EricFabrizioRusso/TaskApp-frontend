@@ -19,21 +19,23 @@ function App() {
       <h1 className='bg-primary text-light p-3 text-center m-3'>Mi app TodoApp</h1>
       <AuthProvider>
         <TaskProvider>
-          <HashRouter>
+          <BrowserRouter>
             <NavBar/>
               <Routes>
-                <Route path='/' element={<HomePage/>}/>
-                <Route path='/register' element={<RegisterPage/>}/>
-                <Route path='/login' element={<LoginPage/>}/>
-                
-                <Route element={<ProtectedRoute/>}>
-                  <Route path='/tasks' element={<TasksPage/>}/>
-                  <Route path='/add-task' element={<TaskFormPage/>}/>
-                  <Route path='/tasks/:id' element={<TaskFormPage/>}/>
-                  <Route path='/profile' element={<ProfilePage/>}/>
-                </Route>
+                  <Route path='/' element={<HomePage/>}/>
+                  <Route path='/register' element={<RegisterPage/>}/>
+                  <Route path='/login' element={<LoginPage/>}/>
+
+               
+            
+                  <Route element={<ProtectedRoute/>}>
+                    <Route path='/tasks' element={<TasksPage/>}/>
+                    <Route path='/add-task' element={<TaskFormPage/>}/>
+                    <Route path='/tasks/:id' element={<TaskFormPage/>}/>
+                    <Route path='/profile' element={<ProfilePage/>}/>
+                  </Route>
               </Routes>
-          </HashRouter>
+          </BrowserRouter>
         </TaskProvider>
       </AuthProvider>
     </>
