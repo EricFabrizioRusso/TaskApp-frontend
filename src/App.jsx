@@ -24,7 +24,7 @@ function App() {
               <Routes>
 
                   <Route path='/' element={<HomePage/>}/>
-                  <Route path='/test' element={<h1 className='text-light'>Testetando ruta</h1>}/>
+                  <Route path='/test' element={<h1>Testenado haber si anda</h1>}/>
                   <Route path='/register' element={<RegisterPage/>}/>
                   <Route path='/login' element={<LoginPage/>}/>
 
