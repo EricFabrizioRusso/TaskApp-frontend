@@ -86,22 +86,14 @@ export const AuthProvider =({children})=>{
 
 
             const cookies= Cookies.get();
-            let saveCookie= cookies.token
-            const cookieFrontend= Cookies.set('newToken', saveCookie)
-            console.log(cookies.token,'Compruebo si existen cookies');
+            //console.log(cookies.token,'Compruebo si existen cookies');
             if(!cookies.token){
                 setIsAuthenticated(false);
                 setloading(false);
                 console.log("entra al !cookies")
                 return;
             }
-            //console.log(cookieFrontend);
-            /*if(!cookieFrontend){
-                setIsAuthenticated(false);
-                setloading(false);
-                console.log("entra al !cookiesFrontend")
-                return;
-            }*/
+  
 
             try{
 
@@ -110,11 +102,7 @@ export const AuthProvider =({children})=>{
                 setUser(res.json);
                 setloading(false);
                 console.log('token valido')
-                /*const res= await  verifyTokenRequest(cookieFrontend);
-                setIsAuthenticated(true);
-                setUser(res.json);
-                setloading(false);
-                console.log('token valido')*/
+     
                 
             }catch(error){
 
