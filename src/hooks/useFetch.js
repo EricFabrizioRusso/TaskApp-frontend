@@ -69,7 +69,7 @@ export const verifyTokenRequest= async(value)=>{
             credentials:'include',
             headers:{
                 'Content-Type': 'application/json',
-                'Cookie': document.cookie
+                //'Cookie': document.cookie
             },
             body: JSON.stringify(value),
         });
