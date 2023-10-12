@@ -90,7 +90,7 @@ export const AuthProvider =({children})=>{
             if(!cookies.token){
                 setIsAuthenticated(false);
                 setloading(false);
-                //console.log("entra al !cookies")
+                console.log("entra al !cookies")
                 return;
             }
 
