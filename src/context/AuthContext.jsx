@@ -86,15 +86,17 @@ export const AuthProvider =({children})=>{
 
 
             const cookies= Cookies.get();
-            const cookieFrontend= Cookies.set('newToken', cookies.token)
-            console.log(cookies,'Compruebo si existen cookies');
+            let saveCookie= cookies.token
+            const cookieFrontend= Cookies.set('newToken', saveCookie)
+            console.log(cookies.token,'Compruebo si existen cookies');
             /*if(!cookies.token){
                 setIsAuthenticated(false);
                 setloading(false);
                 console.log("entra al !cookies")
                 return;
             }*/
-            if(!cookieFrontend.newToken){
+            //console.log(cookieFrontend);
+            if(!cookieFrontend){
                 setIsAuthenticated(false);
                 setloading(false);
                 console.log("entra al !cookiesFrontend")
@@ -127,10 +129,6 @@ export const AuthProvider =({children})=>{
 
     }, []);
 
-    useEffect(() => {
-        
-        checkLogin();
-    }, []);
 
 
 
