@@ -2,6 +2,8 @@ import { createContext, useState, useContext, useEffect } from "react";
 import { loginData, postData, verifyTokenRequest } from "../hooks/useFetch";
 import { array } from "zod";
 import Cookies from 'js-cookie';
+import {useNavigate} from 'react-router-dom';
+const navigate= useNavigate()
 
 
 export const AuthContext= createContext();
@@ -76,6 +78,7 @@ export const AuthProvider =({children})=>{
         Cookies.remove('token');
         Cookies.remove('newToken');
         setIsAuthenticated(false);
+        navigate('/')
         setUser(null);
 
     }
