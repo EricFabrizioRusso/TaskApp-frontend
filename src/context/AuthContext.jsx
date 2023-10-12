@@ -86,7 +86,7 @@ export const AuthProvider =({children})=>{
 
 
             const cookies= Cookies.get();
-            const cookieFrontend= Cookies.set('newToken', cookies)
+            const cookieFrontend= Cookies.set('newToken', cookies.token)
             console.log(cookies,'Compruebo si existen cookies');
             /*if(!cookies.token){
                 setIsAuthenticated(false);
@@ -94,7 +94,7 @@ export const AuthProvider =({children})=>{
                 console.log("entra al !cookies")
                 return;
             }*/
-            if(!cookieFrontend.token){
+            if(!cookieFrontend.newToken){
                 setIsAuthenticated(false);
                 setloading(false);
                 console.log("entra al !cookiesFrontend")
