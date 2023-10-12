@@ -127,6 +127,11 @@ export const AuthProvider =({children})=>{
 
     }, []);
 
+    useEffect(() => {
+        
+        checkLogin();
+    }, []);
+
 
 
 
