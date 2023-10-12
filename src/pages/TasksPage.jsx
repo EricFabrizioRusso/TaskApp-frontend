@@ -7,15 +7,15 @@ const TasksPage = () => {
   const {getTasks,tasks}= useTasks();
 
 
-  useEffect(() => {
+  /*useEffect(() => {
     
     getTasks();
 
-  }, []);
+  }, []);*/
 
   useEffect(() => {
 
-    console.log('se renderiza')
+    //console.log('se renderiza')
     getTasks();
   }, [tasks]);
 
