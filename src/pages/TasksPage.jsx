@@ -13,11 +13,11 @@ const TasksPage = () => {
 
   }, []);
 
-  /*useEffect(() => {
+  useEffect(() => {
 
     //console.log('se renderiza')
     getTasks();
-  }, [tasks]);*/
+  }, [tasks]);
 
 
   if(tasks.message === 'There is not task for this user'){
