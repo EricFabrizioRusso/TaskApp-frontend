@@ -3,7 +3,7 @@ import { loginData, postData, verifyTokenRequest } from "../hooks/useFetch";
 import { array } from "zod";
 import Cookies from 'js-cookie';
 import {useNavigate} from 'react-router-dom';
-const navigate= useNavigate()
+
 
 
 export const AuthContext= createContext();
@@ -21,6 +21,7 @@ export const AuthProvider =({children})=>{
     const [isAuthenticated, setIsAuthenticated] = useState(false);
     const [AuthError, setAuthError] = useState([]);
     const [loading, setloading] = useState(true);
+
 
     const signup=async (user)=>{
 
@@ -78,7 +79,7 @@ export const AuthProvider =({children})=>{
         Cookies.remove('token');
         Cookies.remove('newToken');
         setIsAuthenticated(false);
-        navigate('/')
+        //navigate('/')
         setUser(null);
 
     }

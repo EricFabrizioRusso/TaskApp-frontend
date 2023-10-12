@@ -17,7 +17,7 @@ const TasksPage = () => {
 
     //console.log('se renderiza')
     getTasks();
-  }, [tasks]);
+  }, []);
 
 
   if(tasks.message === 'There is not task for this user'){
