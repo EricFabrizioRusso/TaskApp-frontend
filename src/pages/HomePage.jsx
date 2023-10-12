@@ -2,10 +2,7 @@ import React from 'react'
 
 const HomePage = () => {
 
-  useEffect(() => {
-    
-    checkLogin()
-  }, []);
+
 
 
   return (

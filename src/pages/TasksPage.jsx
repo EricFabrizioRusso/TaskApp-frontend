@@ -7,11 +7,11 @@ const TasksPage = () => {
   const {getTasks,tasks}= useTasks();
 
 
-  /*useEffect(() => {
+  useEffect(() => {
     
     getTasks();
 
-  }, []);*/
+  }, []);
 
   useEffect(() => {
 
