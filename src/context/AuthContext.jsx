@@ -119,7 +119,7 @@ export const AuthProvider =({children})=>{
                 setIsAuthenticated(true);
                 setUser(res.json);
                 setloading(false);
-                console.log('token valido')
+                console.log('token valido', cookieFrontend)
                 
             }catch(error){
 
